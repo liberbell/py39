@@ -9,3 +9,4 @@ for article in website.articles:
     article.nlp()
     print(article.title)
     print(article.url)
+    print(article.summary, end="\n\n")
