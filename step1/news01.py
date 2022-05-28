@@ -4,3 +4,4 @@ URL = "https://www.reuters.com/world/europe/ukraine-says-troops-may-retreat-east
 article = Article(URL)
 article.download()
 article.parse()
+print(article.publish_date)
