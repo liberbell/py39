@@ -1,3 +1,4 @@
+from time import strftime
 import newspaper
 import csv
 import datetime
@@ -19,4 +20,5 @@ for article in website.articles:
         break
     i = i + 1
 
-csv_date = datetime.datetime.today()
+csv_date = datetime.datetime.today().strftime("%Y%m%d")
+csv_file_name = "Bloomberg_" + csv_date
