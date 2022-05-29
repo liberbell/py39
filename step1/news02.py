@@ -7,7 +7,7 @@ URL = "https://www.bloomberg.co.jp/"
 website = newspaper.build(URL, memoize_articles = False)
 
 csv_date = datetime.datetime.today().strftime("%Y%m%d")
-csv_file_name = "Bloomberg_" + csv_date
+csv_file_name = "Bloomberg_" + csv_date + ".csv"
 
 f = open(csv_file_name, "w", encoding="cp932", errors="ignore")
 writer = csv.writer(f, lineterminator="\n")
