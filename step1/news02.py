@@ -28,7 +28,10 @@ for article in website.articles:
     csvlist.append(article.title)
     csvlist.append(article.url)
     csvlist.append(article.summary)
+    writer.writerow(csvlist)
 
     if i > 9:
         break
     i = i + 1
+
+f.close()
