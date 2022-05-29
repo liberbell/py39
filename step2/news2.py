@@ -13,3 +13,5 @@ for article in website.articles:
     article.parse()
     article.nlp()
     print("Article", ":", article.title)
+    print(article.url)
+    print(article.summary, end="\n")
