@@ -1,4 +1,6 @@
 import newspaper
+import csv
+import datetime
 
 URL = "https://www.bloomberg.co.jp/"
 website = newspaper.build(URL, memoize_articles = False)
@@ -16,3 +18,5 @@ for article in website.articles:
     if i > 9:
         break
     i = i + 1
+
+csv_date = datetime.datetime.today()
