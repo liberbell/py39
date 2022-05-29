@@ -15,3 +15,7 @@ for article in website.articles:
     print("Article", ":", article.title)
     print(article.url)
     print(article.summary, end="\n")
+
+    if i > 9:
+        break
+    i = i + 1
