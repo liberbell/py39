@@ -22,3 +22,5 @@ for article in website.articles:
 
 csv_date = datetime.datetime.today().strftime("%Y%m%d")
 csv_file_name = "Bloomberg_" + csv_date
+
+f = open(csv_file_name, "w", encoding="cp932", errors="ignore")
