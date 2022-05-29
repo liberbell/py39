@@ -15,7 +15,7 @@ for url in URLs:
         article.download()
         article.parse()
         article.nlp()
-        print("Article", ":", article.title)
+        print("Article", str(i), ":", article.title)
         print(article.url)
         print(article.summary, end="\n")
 
