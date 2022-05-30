@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+from datetime import datetime as dt
 
 URL = "https://finance.yahoo.com/quote/AAPL/history?p=AAPL"
 
