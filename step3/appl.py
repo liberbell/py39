@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import requests
 from datetime import datetime as dt
 
@@ -22,4 +24,5 @@ data[0].set_index("Date2", inplace=True)
 # print(data[0].head())
 # print(data[0]["Adj Close**"].dtype)
 
-data[0]["Adj Close**"].plot(title="APPL Stock Price", grid=True)
+plot1 = data[0]["Adj Close**"].plot(title="APPL Stock Price", grid=True)
+plt.show()
