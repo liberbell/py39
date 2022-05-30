@@ -25,4 +25,5 @@ data[0].set_index("Date2", inplace=True)
 # print(data[0]["Adj Close**"].dtype)
 
 plot1 = data[0]["Adj Close**"].plot(title="APPL Stock Price", grid=True)
-plt.show()
+# plt.show()
+data[0].to_csv("AAPL_stock.csv")
