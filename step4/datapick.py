@@ -30,4 +30,6 @@ print(response.status_code)
 URL2 = "https://www.google.com/search"
 param = {"q": "python"}
 
-response = requests.get()
+response = requests.get(URL2, params=param)
+print(response.status_code)
+print(response.text)
