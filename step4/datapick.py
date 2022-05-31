@@ -3,7 +3,7 @@ import requests
 
 URL = "https://www.yahoo.co.jp"
 
-response = requests.get(URL)
+# response = requests.get(URL)
 # print(response.status_code)
 # print(response.text)
 
@@ -19,5 +19,6 @@ user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 header = {"user_agent": user_agent}
 
 response = requests.get(URL, headers=header)
+print(response.status_code)
 for key, value in response.headers.items():
     print(key, "  ", value)
