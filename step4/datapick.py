@@ -1,4 +1,5 @@
 from pydoc import resolve
+from socket import timeout
 import requests
 
 URL = "https://www.yahoo.co.jp"
@@ -20,5 +21,8 @@ header = {"user_agent": user_agent}
 
 response = requests.get(URL, headers=header)
 print(response.status_code)
-for key, value in response.headers.items():
-    print(key, "  ", value)
+# for key, value in response.headers.items():
+#     print(key, "  ", value)
+
+response = requests.get(URL, headers=header, timeout=5)
+print(response.status_code)
