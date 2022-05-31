@@ -26,3 +26,6 @@ print(response.status_code)
 
 response = requests.get(URL, headers=header, timeout=5)
 print(response.status_code)
+
+URL2 = "https://www.google.com/search?q=python"
+param = ["": "python"]
