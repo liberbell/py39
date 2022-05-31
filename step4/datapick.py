@@ -10,8 +10,8 @@ URL = "https://www.yahoo.co.jp"
 # print(response.content)
 # print(response.encoding)
 # print(response.headers)
-for key, value in response.headers.items():
-    print(key, "  ", value)
+# for key, value in response.headers.items():
+#     print(key, "  ", value)
 
 # print(response.cookies)
 
