@@ -12,3 +12,5 @@ print(response.status_code)
 # print(response.headers)
 for key, value in response.headers.items():
     print(key, "  ", value)
+
+print(response.cookies)
