@@ -37,4 +37,5 @@ soup = BeautifulSoup(html, "html.parser")
 # print(soup.find_all("a"))
 # print(soup.find("a"))
 for tag_a in soup.find_all("a"):
-    print("A tag:", tag_a)
+    print("Title :", tag_a.string)
+    print(tag_a["href"], end="\n\n")
