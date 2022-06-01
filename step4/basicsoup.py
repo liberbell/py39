@@ -19,3 +19,6 @@ html = """<html>
     </body>
 </html>
 """
+
+soup = BeautifulSoup(html, "html.parser")
+print(soup)
