@@ -23,3 +23,9 @@ html = """
 
 soup = BeautifulSoup(html, "html.parser")
 print(soup.prettify())
+print(soup.title)
+print(soup.find_all("a"))
+
+for element_a in soup.find_all("a"):
+    print("Title: ", element_a.string)
+    print("URL: ", element_a["href"], end="\n\n")
