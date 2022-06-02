@@ -14,7 +14,7 @@ html = """<html>
             <a class="book" href="https://www.amazon.com/Steve-Jobs-La-biografa%C2%ADa-audiobook/dp/B00L5L0YO0/ref=sr_1_5?crid=1YN4B7XLZBFLJ&keywords=steave+jobs&qid=1654041011&sprefix=steave+job%2Caps%2C253&sr=8-5">Steve Jobs. La biografía</a>
         </p>
         <p class="end">
-            Thses books are now on sales.
+            <b>Thses books are now on sales.</b>
         </p>
     </body>
 </html>
@@ -41,3 +41,4 @@ for tag_a in soup.find_all("a"):
     print(tag_a["href"], end="\n\n")
 
 print(soup.select("body > p.end > b"))
+print(soup.select("body > p.end > b")[0].string)
