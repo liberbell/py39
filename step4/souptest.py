@@ -20,3 +20,5 @@ html = """
     </body>
 </html>
 """
+
+soup = BeautifulSoup(html, "html.parser")
