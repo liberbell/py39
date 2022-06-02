@@ -15,5 +15,10 @@ soup = BeautifulSoup(response1.text, "html.parser")
 # body > div.home-2021-primary > div.home-2021-primary__main > div.headline > article:nth-child(3) > div > h3 > a
 
 elems = soup.select("div.headline > article:nth-child(1) > div > h3 > a")
+# print(elems[0])
+# print(elems[0].contents[0])
+# print(elems[0].attrs["href"])
+
+elems = soup.select("div.headline")
 print(elems[0])
-print(elems[0].contents[0])
+print(elems[0].prettify())
