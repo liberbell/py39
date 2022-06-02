@@ -39,3 +39,5 @@ soup = BeautifulSoup(html, "html.parser")
 for tag_a in soup.find_all("a"):
     print("Title :", tag_a.string)
     print(tag_a["href"], end="\n\n")
+
+print(soup.select("body > p.end > b"))
