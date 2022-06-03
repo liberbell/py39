@@ -29,3 +29,6 @@ print(elems[0].h3.a.string)
 print(elems[0].h3.a["href"])
 print(elems[0].article.next_sibling.next_sibling.h3.a.string)
 print(elems[0].article.next_sibling.next_sibling.h3.a["href"])
+
+for sibling in elems[0].article.next_siblings:
+    print(sibling.h3.a.string if sibling != "\n" and sibling.h3 else "")
