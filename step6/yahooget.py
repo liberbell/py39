@@ -23,4 +23,6 @@ for elem in elems:
     pickup_link = elem.attrs["href"]
     pickup_response = requests.get(pickup_link)
     pickup_soup = BeautifulSoup(pickup_response.text, "html.parser")
-    print(pickup_soup.prettify())
+    # print(pickup_soup.prettify())
+    elems = soup.select("div.sc-bYzVrU.hUZPkx > div > p > a")
+    print(elems)
