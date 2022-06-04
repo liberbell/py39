@@ -6,7 +6,7 @@ import time
 URL = "https://www.yahoo.co.jp/"
 
 yahoo_response = requests.get(URL)
-soup = BeautifulSoup(yahoo_response, "html.parser")
+soup = BeautifulSoup(yahoo_response.text, "html.parser")
 
 elms = soup.find_all("a")
 print(elms)
