@@ -39,5 +39,8 @@ for pickup_link in pickup_links:
 
     news_response = requests.get(news_link)
     news_soup = BeautifulSoup(news_response.text, "html.parser")
-    print(news_soup.title.text)
-    print(news_link)
+    print("Title : ", news_soup.title.text)
+    # print(news_link)
+    
+    detail_text = news_soup.find(class_=re.compile("Directlink"))
+    print(detail_text)
