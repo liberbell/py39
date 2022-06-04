@@ -13,5 +13,8 @@ elms = soup.find_all("a")
 # print(elms)
 
 elems = soup.find_all(href=re.compile("yahoo.co.jp/pickup"))
-print(elems[0].span.string)
-print(elems[0].attrs["href"])
+# print(elems[0].span.string)
+# print(elems[0].attrs["href"])
+for elem in elems:
+    print(elem.span.string)
+    print(elem.attrs["href"], end="\n\n")
