@@ -15,9 +15,12 @@ elms = soup.find_all("a")
 elems = soup.find_all(href=re.compile("yahoo.co.jp/pickup"))
 # print(elems[0].span.string)
 # print(elems[0].attrs["href"])
+
+# #uamods-pickup > div.sc-bYzVrU.hUZPkx > div > p > a
 for elem in elems:
     print(elem.span.string)
     print(elem.attrs["href"], end="\n\n")
     pickup_link = elem.attrs["href"]
     pickup_response = requests.get(pickup_link)
     pickup_soup = BeautifulSoup(pickup_response.text, "html.parser")
+    print(pickup_soup.prettify())
