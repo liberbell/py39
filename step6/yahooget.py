@@ -43,4 +43,4 @@ for pickup_link in pickup_links:
     # print(news_link)
     
     detail_text = news_soup.find(class_=re.compile("Directlink"))
-    print(detail_text)
+    print(detail_text.text if hasattr(detail_text. "text") else '')
