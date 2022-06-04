@@ -34,4 +34,7 @@ elems = soup.select("div.headline")
 #     print(sibling.h3.a.string if sibling != "\n" and sibling.h3 else "")
 #     print(sibling.h3.a["href"] if sibling != "\n" and sibling.h3 else "")
 
-print(elems[0].prettify())
+# print(elems[0].prettify())
+
+elems_news = elems[0].find_all("h3")
+print(elems_news)
