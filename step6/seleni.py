@@ -11,5 +11,6 @@ search_bar = wdriver.find_element(By.NAME, "q")
 search_bar.send_keys("Python")
 search_bar.submit()
 
-for elem_h3 in wdriver.find_elements_by_xpath("//a/h3"):
-    print(elem_h3.text)
+print(wdriver.find_elements(By.XPATH, "//a/h3"))
+# for elem_h3 in wdriver.find_elements(By.XPATH, "//a/h3"):
+#     print(elem_h3.text)
