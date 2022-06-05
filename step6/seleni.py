@@ -13,5 +13,6 @@ search_bar.submit()
 
 #rso > div:nth-child(1) > div > div > div > div > div > div.yuRUbf > a > h3
 # print(wdriver.find_element(By.XPATH, "//a/h3"))
-for elem_h3 in wdriver.find_element(By.XPATH, value="//a/h3"):
+# for elem_h3 in wdriver.find_element(by=By.XPATH, value="//a/h3"):
+for elem_h3 in wdriver.find_element_by_xpath("//a/h3")
     print(elem_h3.text)
