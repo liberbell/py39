@@ -7,5 +7,6 @@ bbqdata = requests.get(URL)
 print(bbqdata.status_code)
 
 bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
-elem = bbqdata_soup.find_all("td")
-print(elem)
+elem1 = bbqdata_soup.find_all("td")
+elem2 = bbqdata_soup.select("tbody > tr:nth-child(2) > td:nth-child(6) > a")
+print(elem2)
