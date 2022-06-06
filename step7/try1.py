@@ -8,5 +8,9 @@ print(bbqdata.status_code)
 
 bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
 elem1 = bbqdata_soup.find_all("td")
-elem2 = bbqdata_soup.select("tbody > tr:nth-child(2) > td:nth-child(6) > a")
+elem2 = bbqdata_soup.select("tbody > tr.items > td.items > a")
 print(elem2)
+
+#main > section > div.sn > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(6) > a
+   #main > ul > li:nth-child(1) > a
+div#main > ul.items > li
