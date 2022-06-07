@@ -11,7 +11,9 @@ bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
 elem1 = bbqdata_soup.find_all("td")
 elem2 = bbqdata_soup.select("td > a")
 elem3 = bbqdata_soup.find_all("a")
-print(elem2)
+elem2_1 = elem2.select('a[alt="1部"]')
+print(elem2_1)
+# print(elem2)
 # print(elem2[0])
 # print(elem3)
 # for elem in elem2:
@@ -26,5 +28,5 @@ print(elem2)
 # div#main > ul.items > li
 # i = 0
 # for i in range(len(elem2)):
-#     print(elem2[i])
+#     print(elem2[i].attrs["href"])
 #     i = i + 1
