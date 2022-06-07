@@ -13,8 +13,9 @@ elem2 = bbqdata_soup.select("tr:nth-child(2)> td > a")
 elem3 = bbqdata_soup.find_all("a")
 print(elem2)
 # print(elem3)
-# for el in elem3:
-#     print(elem3[0].attrs["href"])
+for elem in elem2:
+    # print(elem.a.string)
+    print(elem.a["href"])
 
 
 #main > section > div.sn > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(6) > a
