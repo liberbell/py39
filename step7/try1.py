@@ -25,6 +25,6 @@ elem3 = bbqdata_soup.find_all("a")
    #main > ul > li:nth-child(1) > a
 # div#main > ul.items > li
 i = 0
-for i in lenge(elem2):
-    print(elem[i])
+for i in range(len(elem2)):
+    print(elem2[i])
     i = i + 1
