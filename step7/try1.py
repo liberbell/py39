@@ -9,9 +9,9 @@ print(bbqdata.status_code)
 bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
 # print(bbqdata_soup.prettify())
 elem1 = bbqdata_soup.find_all("td")
-elem2 = bbqdata_soup.select("tr:nth-child(2)> td > a")
+elem2 = bbqdata_soup.select("td > a")
 elem3 = bbqdata_soup.find_all("a")
-# print(elem2)
+print(elem2)
 # print(elem2[0])
 # print(elem3)
 # for elem in elem2:
@@ -24,7 +24,7 @@ elem3 = bbqdata_soup.find_all("a")
 #main > section > div.sn > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(6) > a
    #main > ul > li:nth-child(1) > a
 # div#main > ul.items > li
-i = 0
-for i in range(len(elem2)):
-    print(elem2[i])
-    i = i + 1
+# i = 0
+# for i in range(len(elem2)):
+#     print(elem2[i])
+#     i = i + 1
