@@ -5,12 +5,12 @@ import re
 URL = "https://kanagawa-park.jp/bbq/yoyaku/hatano/calender.html&kind=1"
 
 bbqdata = requests.get(URL)
-print(bbqdata.status_code)
+# print(bbqdata.status_code)
 
 bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
 # print(bbqdata_soup.prettify())
 elem1 = bbqdata_soup.find_all("td")
-elem2 = bbqdata_soup.select("td > a", 'img[alt="1部"]')
+elem2 = bbqdata_soup.select("td > a")
 elem3 = bbqdata_soup.find_all("a")
 elem4 = bbqdata_soup.select('img[alt="1部"]')
 # print(elem4)
@@ -29,7 +29,9 @@ elem4 = bbqdata_soup.select('img[alt="1部"]')
 # div#main > ul.items > li
 i = 0
 search_section = "1部"
-search_days = (19)
+search_day = "19"
+search_keyword = "d=" + search_day
+print(search_keyword)
 for i in range(len(elem2)):
     print(elem2[i])
     i = i + 1
