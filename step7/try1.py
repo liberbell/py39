@@ -12,7 +12,7 @@ bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
 elem1 = bbqdata_soup.find_all("td")
 elem2 = bbqdata_soup.select("td > a")
 elem3 = bbqdata_soup.find_all("a")
-# elem4 = bbqdata_soup.select('img[alt="1部"]')
+elem4 = bbqdata_soup.select('img[alt="1部"]')
 # print(elem4)
 # print(elem2)
 # print(elem2[0])
@@ -30,9 +30,14 @@ elem3 = bbqdata_soup.find_all("a")
 i = 0
 search_section = "1部"
 search_days = (19)
-for i in range(len(elem2)):
+# for i in range(len(elem2)):
 
-    print(elem2[i])
+#     print(elem2[i])
+#     i = i + 1
+
+for i in range(len(elem4)):
+
+    print(elem4[i])
     i = i + 1
 
 # print(elem2)
