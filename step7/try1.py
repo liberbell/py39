@@ -36,5 +36,5 @@ search_days = (19)
 #     i = i + 1
 
 print(elem2)
-section_list = [s for s in elem2 if 'alt="1部"' in s]
+section_list = [s for s in elem2.img if 'alt="1部"' in s]
 print(section_list)
