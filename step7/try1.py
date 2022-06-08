@@ -35,5 +35,6 @@ search_days = (19)
 #     print(elem2[i])
 #     i = i + 1
 
-section_list = [s for s in elem2 if "1部" in s]
+print(elem2)
+section_list = [s for s in elem2 if 'alt="1部"' in s]
 print(section_list)
