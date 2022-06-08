@@ -35,5 +35,5 @@ search_days = (19)
 #     print(elem2[i])
 #     i = i + 1
 
-section_list = [list1 for list1 in elem2 if search_section in list1]
+section_list = [s for s in elem2 if "1部" in s]
 print(section_list)
