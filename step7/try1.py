@@ -30,11 +30,11 @@ elem3 = bbqdata_soup.find_all("a")
 i = 0
 search_section = "1部"
 search_days = (19)
-# for i in range(len(elem2)):
+for i in range(len(elem2)):
 
-#     print(elem2[i])
-#     i = i + 1
+    print(elem2[i])
+    i = i + 1
 
-print(elem2)
-section_list = [s for s in elem2.img if 'alt="1部"' in s]
-print(section_list)
+# print(elem2)
+# section_list = [s for s in elem2.img if 'alt="1部"' in s]
+# print(section_list)
