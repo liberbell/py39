@@ -10,7 +10,7 @@ print(bbqdata.status_code)
 bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
 # print(bbqdata_soup.prettify())
 elem1 = bbqdata_soup.find_all("td")
-elem2 = bbqdata_soup.select("td > a")
+elem2 = bbqdata_soup.select("td > a", 'img[alt="1部"]')
 elem3 = bbqdata_soup.find_all("a")
 elem4 = bbqdata_soup.select('img[alt="1部"]')
 # print(elem4)
@@ -30,15 +30,14 @@ elem4 = bbqdata_soup.select('img[alt="1部"]')
 i = 0
 search_section = "1部"
 search_days = (19)
-# for i in range(len(elem2)):
-
-#     print(elem2[i])
-#     i = i + 1
-
-for i in range(len(elem4)):
-
-    print(elem4[i])
+for i in range(len(elem2)):
+    print(elem2[i])
     i = i + 1
+
+# for i in range(len(elem4)):
+
+#     print(elem4[i])
+#     i = i + 1
 
 # print(elem2)
 # section_list = [s for s in elem2.img if 'alt="1部"' in s]
