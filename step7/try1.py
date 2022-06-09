@@ -46,6 +46,7 @@ for i in range(len(elem2)):
             match_count = match_count + 1
     # print(elem2[i])
     # print(grep_target)
+    print(match_count)
     if match_count != 0:
         beep(2000, 100)
     i = i + 1
