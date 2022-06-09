@@ -33,7 +33,7 @@ search_day = "19"
 search_keyword = "d=" + search_day
 print(search_keyword)
 for i in range(len(elem2)):
-    if elem2[i] in str(search_day):
+    if elem2[i] in search_day:
         grep_target = elem2[i]
     # print(elem2[i])
     print(grep_target)
