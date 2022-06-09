@@ -29,9 +29,9 @@ elem4 = bbqdata_soup.select('img[alt="1部"]')
 # div#main > ul.items > li
 i = 0
 search_section = "1部"
-search_day = "19"
-search_keyword = "d=" + search_day
-print(search_keyword)
+search_day = 19
+# search_keyword = "d=" + search_day
+# print(search_keyword)
 for i in range(len(elem2)):
     if elem2[i] in search_day:
         grep_target = elem2[i]
