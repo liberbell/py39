@@ -30,8 +30,8 @@ elem4 = bbqdata_soup.select('img[alt="1部"]')
 # div#main > ul.items > li
 i = 0
 search_section = "1部"
-search_day = "d-19"
-# search_keyword = "d=" + search_day
+search_day = 19
+search_keyword = "d=" + str(search_day)
 # print(search_keyword)
 for i in range(len(elem2)):
     url_parse = urlparse(str(elem2[i]))
@@ -39,7 +39,7 @@ for i in range(len(elem2)):
     # print(type(url_parse.path))
     if search_section in url_parse.path:
         # print(url_parse.path)
-        if search_day in url_parse.path:
+        if search_keyword in url_parse.path:
             print(url_parse.path)
     # print(elem2[i])
     # print(grep_target)
