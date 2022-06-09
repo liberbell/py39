@@ -35,8 +35,10 @@ search_day = 19
 # print(search_keyword)
 for i in range(len(elem2)):
     url_parse = urlparse(str(elem2[i]))
-    print(url_parse.path)
-    print(type(url_parse.path))
+    # print(url_parse.path)
+    # print(type(url_parse.path))
+    if search_section in url_parse.path:
+        print(url_parse.path)
     # print(elem2[i])
     # print(grep_target)
     i = i + 1
