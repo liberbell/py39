@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+from urllib.parse import urlparse
 
 URL = "https://kanagawa-park.jp/bbq/yoyaku/hatano/calender.html&kind=1"
 
