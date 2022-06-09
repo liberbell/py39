@@ -33,7 +33,7 @@ search_day = "19"
 search_keyword = "d=" + search_day
 print(search_keyword)
 for i in range(len(elem2)):
-    GREP_TARGET = [line for line in elem2[i] if search_keyword in line]
+    if elem2[i] in search_keyword:
     # print(elem2[i])
     print(GREP_TARGET)
     i = i + 1
