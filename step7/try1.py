@@ -4,6 +4,12 @@ import re
 from urllib.parse import urlparse
 import os
 
+def beep(freq, dur=100):
+
+    # @param freq
+    # @param dur（ms）
+    os.system('play -n synth %s sin %s' % (dur/1000, freq))
+
 URL = "https://kanagawa-park.jp/bbq/yoyaku/hatano/calender.html&kind=1"
 
 bbqdata = requests.get(URL)
@@ -59,8 +65,3 @@ for i in range(len(elem2)):
 # print(elem2)
 # section_list = [s for s in elem2.img if 'alt="1部"' in s]
 # print(section_list)
-def beep(freq, dur=100):
-
-    # @param freq
-    # @param dur（ms）
-    os.system('play -n synth %s sin %s' % (dur/1000, freq))
