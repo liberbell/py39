@@ -41,22 +41,24 @@ search_day = 17
 search_keyword = "d=" + str(search_day)
 match_count = 0
 # print(search_keyword)
-for i in range(len(elem2)):
-    url_parse = urlparse(str(elem2[i]))
-    # print(url_parse.path)
-    # print(type(url_parse.path))
-    if search_section in url_parse.path:
+while True:
+    for i in range(len(elem2)):
+        url_parse = urlparse(str(elem2[i]))
         # print(url_parse.path)
-        if search_keyword in url_parse.path:
-            print(url_parse.path)
-            match_count = match_count + 1
-    # print(elem2[i])
-    # print(grep_target)
-    i = i + 1
+        # print(type(url_parse.path))
+        if search_section in url_parse.path:
+            # print(url_parse.path)
+            if search_keyword in url_parse.path:
+                print(url_parse.path)
+                match_count = match_count + 1
+        # print(elem2[i])
+        # print(grep_target)
+        i = i + 1
+        sleep 10
+    if match_count != 0:
+        break
 
-print(match_count)
-if match_count != 0:
-    beep(2000, 100)
+beep(2000, 100)
 # for i in range(len(elem4)):
 
 #     print(elem4[i])
