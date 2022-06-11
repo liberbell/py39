@@ -5,8 +5,8 @@ from urllib.parse import urlparse
 import os
 import time
 import smtplib 
-from email.MIMEMultipart import MIMEMultipart 
-from email.MIMEText import MIMEText
+# from email.MIMEMultipart import MIMEMultipart 
+# from email.MIMEText import MIMEText
 
 def beep(freq, dur=100):
 
@@ -73,7 +73,9 @@ while True:
         i = i + 1
         time.sleep(30)
         print(match_count)
-        if match_count != 0:
+        if match_count == 0:
+            print("No vacancy!")
+        else:                
             beep(2000, 100)
 
 msg['From'] = 'sender@protonmail.com'
