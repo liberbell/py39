@@ -56,7 +56,7 @@ while True:
         # print(grep_target)
         i = i + 1
         time.sleep(10)
-        print(count)
+        print(match_count)
     if match_count != 0:
         break
 
