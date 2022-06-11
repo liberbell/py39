@@ -38,7 +38,7 @@ elem4 = bbqdata_soup.select('img[alt="1部"]')
 # div#main > ul.items > li
 i = 0
 search_section = "1部"
-search_day = 17
+search_day = 19
 search_keyword = "d=" + str(search_day)
 match_count = 0
 # print(search_keyword)
