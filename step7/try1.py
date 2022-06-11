@@ -3,6 +3,7 @@ import requests
 import re
 from urllib.parse import urlparse
 import os
+import time
 
 def beep(freq, dur=100):
 
@@ -54,7 +55,8 @@ while True:
         # print(elem2[i])
         # print(grep_target)
         i = i + 1
-        sleep 10
+        time.sleep(10)
+        print(count)
     if match_count != 0:
         break
 
