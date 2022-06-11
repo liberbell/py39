@@ -55,12 +55,12 @@ while True:
         # print(elem2[i])
         # print(grep_target)
         i = i + 1
-        time.sleep(10)
+        time.sleep(15)
         print(match_count)
-    if match_count != 0:
-        break
+        if match_count != 0:
+            beep(2000, 100)
 
-beep(2000, 100)
+# beep(2000, 100)
 # for i in range(len(elem4)):
 
 #     print(elem4[i])
