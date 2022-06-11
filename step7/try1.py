@@ -29,7 +29,7 @@ def beep(freq, dur=100):
 
 URL = "https://kanagawa-park.jp/bbq/yoyaku/hatano/calender.html&kind=1"
 
-bbqdata = requests.get(URL)
+bbqdata = requests.get(URL, headers={'Cache-Control': 'no-cache'})
 # print(bbqdata.status_code)
 
 bbqdata_soup = BeautifulSoup(bbqdata.text, "html.parser")
@@ -64,7 +64,7 @@ while True:
         # print(url_parse.path)
         # print(type(url_parse.path))
         if search_section in url_parse.path:
-            # print(url_parse.path)
+            print(url_parse.path)
             if search_keyword in url_parse.path:
                 print(url_parse.path)
                 match_count = match_count + 1
