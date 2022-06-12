@@ -36,10 +36,10 @@ while True:
         # print(elem2[i])
         # print(grep_target)
         i = i + 1
-        
+        time.sleep(30)
         print(match_count)
         if match_count == 0:
             print("No vacancy!")
         else:                
             beep(2000, 100)
-    time.sleep(30)
+    
