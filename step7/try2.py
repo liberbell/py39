@@ -29,9 +29,10 @@ while True:
         # print(url_parse.path)
         # print(type(url_parse.path))
         if search_section in url_parse.path:
-            print(url_parse.path)
-            if search_keyword in url_parse.path:
-                print(url_parse.path)
+            # print(url_parse.path)
+            url_path = url_parse.path
+            if search_keyword in url_path:
+                print(url_path)
                 match_count = match_count + 1
         # print(elem2[i])
         # print(grep_target)
